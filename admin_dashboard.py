@@ -7,10 +7,9 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables from .env
-load_dotenv()
-MONGO_URI = os.getenv("MONGO_URI")
-DB_NAME = os.getenv("DB_NAME", "auth_db")
-COLLECTION_NAME = os.getenv("COLLECTION_NAME", "oryzon")
+MONGO_URI="mongodb+srv://fedy_db_user:L86y7uoxNC5JGcH1@clusterauth.tuzgk0g.mongodb.net/?appName=Clusterauth"
+DB_NAME = "auth_db"
+COLLECTION_NAME = "oryzon"
 
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
